@@ -1,4 +1,5 @@
-// 1. a^b%m
+Fast Power
+// 1. a^b%m  
 function modulo(a,b,m) {
   if(b == 0) {
     return 1
