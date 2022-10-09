@@ -18,7 +18,7 @@ function binarySearch(arr, target) {
 }
 
 function recursiveBinarySearch(arr, target) {
- return search(arr, target, 0, arr.length - 1);
+  return search(arr, target, 0, arr.length - 1);
 }
 
 function search(arr, target, leftIndex, rightIndex) {
@@ -43,3 +43,22 @@ console.log(recursiveBinarySearch(array, 1));
 console.log(binarySearch(array, 6));
 console.log(binarySearch(array, 9));
 console.log(binarySearch(array, 1));
+
+function Descendingbinary(arr, tar) {
+  let left = 0,
+    right = arr.length - 1;
+  while (left <= right) {
+    let mid = Math.round((left + right) / 2);
+    if (tar > arr[mid]) {
+      right = mid - 1;
+    } else if (tar < arr[mid]) {
+      left = mid + 1;
+    } else {
+      return mid;
+    }
+  }
+
+  return -1;
+}
+
+console.log(Descendingbinary([50, 33, 30, 2, 1], 30));
