@@ -48,3 +48,21 @@ function sieveOfErathosthenes(n) {
   isPrime.shift() // removing the 0th index
   return isPrime;
    }
+
+// 3. Finding prime numbers upto n number unOptimised Code
+  int n = scn.nextInt();
+        
+        for(int i = 2 ; i <= n ; i++){
+            //check if i is prime or not
+            boolean flag = true;
+            for(int x = 2 ; x < i ; x++) {
+                if(i % x == 0) {
+                    flag = false;
+                    break;
+                }
+            }
+            
+            if(flag == true) {
+                System.out.println(i);
+            }
+        }
