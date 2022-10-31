@@ -55,7 +55,7 @@ function sieveOfErathosthenes(n) {
         for(int i = 2 ; i <= n ; i++){
             //check if i is prime or not
             boolean flag = true;
-            for(int x = 2 ; x  x <= i ; x++) {
+            for(int x = 2 ; x * x <= i ; x++) {
                 if(i % x == 0) {
                     flag = false;
                     break;
